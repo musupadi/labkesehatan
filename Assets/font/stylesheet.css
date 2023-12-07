@@ -1,0 +1,288 @@
+@font-face {
+    font-family: 'Poligon Regular Link';
+    src: url('Poligon-RegularLink.eot');
+    src: local('Poligon Regular Link'), local('Poligon-RegularLink'),
+        url('Poligon-RegularLink.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-RegularLink.woff2') format('woff2'),
+        url('Poligon-RegularLink.woff') format('woff'),
+        url('Poligon-RegularLink.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-ExtraBoldItalic.eot');
+    src: local('Poligon ExtraBold Italic'), local('Poligon-ExtraBoldItalic'),
+        url('Poligon-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-ExtraBoldItalic.woff2') format('woff2'),
+        url('Poligon-ExtraBoldItalic.woff') format('woff'),
+        url('Poligon-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-BlackItalic.eot');
+    src: local('Poligon Black Italic'), local('Poligon-BlackItalic'),
+        url('Poligon-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-BlackItalic.woff2') format('woff2'),
+        url('Poligon-BlackItalic.woff') format('woff'),
+        url('Poligon-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-BoldItalic.eot');
+    src: local('Poligon Bold Italic'), local('Poligon-BoldItalic'),
+        url('Poligon-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-BoldItalic.woff2') format('woff2'),
+        url('Poligon-BoldItalic.woff') format('woff'),
+        url('Poligon-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Light.eot');
+    src: local('Poligon Light'), local('Poligon-Light'),
+        url('Poligon-Light.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-Light.woff2') format('woff2'),
+        url('Poligon-Light.woff') format('woff'),
+        url('Poligon-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-SemiBold.eot');
+    src: local('Poligon SemiBold'), local('Poligon-SemiBold'),
+        url('Poligon-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-SemiBold.woff2') format('woff2'),
+        url('Poligon-SemiBold.woff') format('woff'),
+        url('Poligon-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon Medium Link';
+    src: url('Poligon-MediumLink.eot');
+    src: local('Poligon Medium Link'), local('Poligon-MediumLink'),
+        url('Poligon-MediumLink.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-MediumLink.woff2') format('woff2'),
+        url('Poligon-MediumLink.woff') format('woff'),
+        url('Poligon-MediumLink.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon SemiBold Link';
+    src: url('Poligon-SemiBoldLink.eot');
+    src: local('Poligon SemiBold Link'), local('Poligon-SemiBoldLink'),
+        url('Poligon-SemiBoldLink.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-SemiBoldLink.woff2') format('woff2'),
+        url('Poligon-SemiBoldLink.woff') format('woff'),
+        url('Poligon-SemiBoldLink.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Thin.eot');
+    src: local('Poligon Thin'), local('Poligon-Thin'),
+        url('Poligon-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-Thin.woff2') format('woff2'),
+        url('Poligon-Thin.woff') format('woff'),
+        url('Poligon-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-RegularItalic.eot');
+    src: local('Poligon Regular Italic'), local('Poligon-RegularItalic'),
+        url('Poligon-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-RegularItalic.woff2') format('woff2'),
+        url('Poligon-RegularItalic.woff') format('woff'),
+        url('Poligon-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Regular.eot');
+    src: local('Poligon Regular'), local('Poligon-Regular'),
+        url('Poligon-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-Regular.woff2') format('woff2'),
+        url('Poligon-Regular.woff') format('woff'),
+        url('Poligon-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-LightItalic.eot');
+    src: local('Poligon Light Italic'), local('Poligon-LightItalic'),
+        url('Poligon-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-LightItalic.woff2') format('woff2'),
+        url('Poligon-LightItalic.woff') format('woff'),
+        url('Poligon-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Medium.eot');
+    src: local('Poligon Medium'), local('Poligon-Medium'),
+        url('Poligon-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-Medium.woff2') format('woff2'),
+        url('Poligon-Medium.woff') format('woff'),
+        url('Poligon-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon Light Link';
+    src: url('Poligon-LightLink.eot');
+    src: local('Poligon Light Link'), local('Poligon-LightLink'),
+        url('Poligon-LightLink.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-LightLink.woff2') format('woff2'),
+        url('Poligon-LightLink.woff') format('woff'),
+        url('Poligon-LightLink.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-SemiBoldItalic.eot');
+    src: local('Poligon SemiBold Italic'), local('Poligon-SemiBoldItalic'),
+        url('Poligon-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-SemiBoldItalic.woff2') format('woff2'),
+        url('Poligon-SemiBoldItalic.woff') format('woff'),
+        url('Poligon-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Black.eot');
+    src: local('Poligon Black'), local('Poligon-Black'),
+        url('Poligon-Black.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-Black.woff2') format('woff2'),
+        url('Poligon-Black.woff') format('woff'),
+        url('Poligon-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon Black Link';
+    src: url('Poligon-BlackLink.eot');
+    src: local('Poligon Black Link'), local('Poligon-BlackLink'),
+        url('Poligon-BlackLink.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-BlackLink.woff2') format('woff2'),
+        url('Poligon-BlackLink.woff') format('woff'),
+        url('Poligon-BlackLink.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-ThinItalic.eot');
+    src: local('Poligon Thin Italic'), local('Poligon-ThinItalic'),
+        url('Poligon-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-ThinItalic.woff2') format('woff2'),
+        url('Poligon-ThinItalic.woff') format('woff'),
+        url('Poligon-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poligon ExtraBold Link';
+    src: url('Poligon-ExtraBoldLink.eot');
+    src: local('Poligon ExtraBold Link'), local('Poligon-ExtraBoldLink'),
+        url('Poligon-ExtraBoldLink.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-ExtraBoldLink.woff2') format('woff2'),
+        url('Poligon-ExtraBoldLink.woff') format('woff'),
+        url('Poligon-ExtraBoldLink.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-Bold.eot');
+    src: local('Poligon Bold'), local('Poligon-Bold'),
+        url('Poligon-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-Bold.woff2') format('woff2'),
+        url('Poligon-Bold.woff') format('woff'),
+        url('Poligon-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon Thin Link';
+    src: url('Poligon-ThinLink.eot');
+    src: local('Poligon Thin Link'), local('Poligon-ThinLink'),
+        url('Poligon-ThinLink.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-ThinLink.woff2') format('woff2'),
+        url('Poligon-ThinLink.woff') format('woff'),
+        url('Poligon-ThinLink.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-MediumItalic.eot');
+    src: local('Poligon Medium Italic'), local('Poligon-MediumItalic'),
+        url('Poligon-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-MediumItalic.woff2') format('woff2'),
+        url('Poligon-MediumItalic.woff') format('woff'),
+        url('Poligon-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poligon';
+    src: url('Poligon-ExtraBold.eot');
+    src: local('Poligon ExtraBold'), local('Poligon-ExtraBold'),
+        url('Poligon-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-ExtraBold.woff2') format('woff2'),
+        url('Poligon-ExtraBold.woff') format('woff'),
+        url('Poligon-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poligon Bold Link';
+    src: url('Poligon-BoldLink.eot');
+    src: local('Poligon Bold Link'), local('Poligon-BoldLink'),
+        url('Poligon-BoldLink.eot?#iefix') format('embedded-opentype'),
+        url('Poligon-BoldLink.woff2') format('woff2'),
+        url('Poligon-BoldLink.woff') format('woff'),
+        url('Poligon-BoldLink.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
