@@ -15,7 +15,7 @@ toLaporan(BuildContext context){
                 parent: animation,
                 curve: Curves.elasticInOut
             );
-            return ScaleTransition(
+             return ScaleTransition(
               scale: animation,
               child: child,
               alignment: Alignment.center,

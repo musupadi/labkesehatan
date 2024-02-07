@@ -30,7 +30,7 @@ const List<String> Kelamin = <String>['L', 'P'];
 const List<String> PosNeg = <String>['Negatif', 'Positif'];
 List<String> Pilihan = <String>['Reaktif', 'Non Reaktif'];
 const List<String> Warna = <String>['Kuning Jernih','Kuning Agak Keruh','Kuning Keruh','Kuning Pekat','Kuning Kecokelatan'];
-const List<String> PositiveNegative = <String>['-(Negatif)','+(Positif 1)','++(Positif 2)','+++(Positif 3)','++++(Positif 4)'];
+const List<String> PositiveNegative = <String>['Normal','+(Positif 1)','++(Positif 2)','+++(Positif 3)','++++(Positif 4)'];
 class InputUrinalisa extends StatefulWidget {
   const InputUrinalisa({Key? key}) : super(key: key);
 
@@ -217,7 +217,7 @@ class _InputUrinalisaState extends State<InputUrinalisa> {
               margin: EdgeInsets.only(top: 20,bottom: 20),
               width: 500,
               decoration: BoxDecoration(
-                  color: PrimaryColorsLayered(),
+                  color: PrimaryColorsLayeredInput(),
                   borderRadius: BorderRadius.circular(50)
               ),
             ),

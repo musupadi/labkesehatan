@@ -16,3 +16,6 @@ Color SecondaryColors2(){
 Color PrimaryColorsLayered(){
   return Color.fromRGBO(255,255,255,0.7);
 }
+Color PrimaryColorsLayeredInput(){
+  return Color.fromRGBO(255,255,255,0.95);
+}

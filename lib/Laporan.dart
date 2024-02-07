@@ -5,6 +5,7 @@ import 'package:labkesehatanehatan/API/Api.dart';
 
 import 'Constant/SizeData.dart';
 import 'Constant/colors.dart';
+import 'Model/Ascendant.dart';
 
 class Laporan extends StatefulWidget {
   const Laporan({Key? key}) : super(key: key);
@@ -62,6 +63,29 @@ class _LaporanState extends State<Laporan> {
                                 "Kembali ke Home"
                             ),
                           ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        downloadExcel();
+                      },
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: PrimaryColors(),
+                            borderRadius: BorderRadius.circular(20)
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text("Download Laporan Excel",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold
+                            ),),
                         ),
                       ),
                     ),

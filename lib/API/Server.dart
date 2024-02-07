@@ -1,6 +1,6 @@
 String getServerName(){
   return 'https://apilabkes.siegemilsystem.com/';
-  // return 'http://localhost/labkes/';
+  // return 'http://localhost/apilabkes.siegemilsystem.com/';
 }
 String Login(){
   return 'labkes/login';
@@ -29,9 +29,17 @@ String SaveSedimen(){
 String SaveImmunoserologi(){
   return 'labkes/immunoserologi';
 }
+String SaveAddon(){
+  return 'labkes/addon';
+}
 String ListDataLaporan(String nama){
   return 'labkes/laporan?nama='+nama;
 }
+String LaporanExcel(){
+  return 'labkes/laporanexcel';
+}
+
+
 
 
 

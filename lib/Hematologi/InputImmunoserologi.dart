@@ -195,7 +195,7 @@ class _InputImmunoserologiState extends State<InputImmunoserologi> {
               margin: EdgeInsets.only(top: 20,bottom: 20),
               width: 500,
               decoration: BoxDecoration(
-                  color: PrimaryColorsLayered(),
+                  color: PrimaryColorsLayeredInput(),
                   borderRadius: BorderRadius.circular(50)
               ),
             ),

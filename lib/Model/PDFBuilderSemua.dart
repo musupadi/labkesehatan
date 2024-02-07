@@ -19,6 +19,7 @@ Future<void> generatePDFSemua(
     String TempatLahir,
     String TanggalLahir,
     String Pemeriksa,
+    String Dokter,
     String NoLab,
     String TanggalPemeriksaan,
     //Hematologi
@@ -67,7 +68,10 @@ Future<void> generatePDFSemua(
     String HIV,
     String VDRL,
     String Narkoba,
-    String Kehamilan
+    String Kehamilan,
+
+    String Pemeriksaan,
+    String Spesimen
     ) async {
   MainSize != 95 ? MainSize=95 : MainSize;
   //Create a PDF document.
@@ -135,15 +139,20 @@ Future<void> generatePDFSemua(
       TanggalLahir,
       NoLab,
       Pemeriksa,
+      Dokter,
       TanggalPemeriksaan
   );
   //Draw grid
   _drawGridHematologi(page,Hemogoblin,Hematokrit,Lekosit,Trombosit,Eritrosit,LED);
-  _drawGridKimiaDarah(page, BilurubinTotal, BilurubinDirect, BilurubinIndirect, SGOT, SGOT, CholesterolTotal, CholesterolHDL, CholesterolLDL, Trigliserida, Ureum, Creatinin, AsamUrat, GulaDarahPuasa, GulaDarah2JamPP, GulaDarahSewaktu);
+  _drawGridKimiaDarah(page, BilurubinTotal, BilurubinDirect, BilurubinIndirect, SGOT, SPGT, CholesterolTotal, CholesterolHDL, CholesterolLDL, Trigliserida, Ureum, Creatinin, AsamUrat, GulaDarahPuasa, GulaDarah2JamPP, GulaDarahSewaktu);
   _drawGridUrinalisa(page, Warna, BeratJenis,PH, Lekosit, Nitrit, Protein, Glukosa, Keton,Urablinogen, Bilurubin, Eryl);
   _drawGridSedimen(page, Epitel, LekositSedimen, EritrositSedimen, Bakteri, Kristal);
-  _drawGridImmunoserologi(page, HbSag,HIV,VDRL,Narkoba,Kehamilan,jk);
-  _drawGridFooter(page, Pemeriksa);
+  if(HbSag=="-" || HIV=="-" || VDRL == "-" || Narkoba == "-"){
+
+  }else{
+    _drawGridImmunoserologi(page, HbSag,HIV,VDRL,Narkoba,Kehamilan,jk);
+  }
+  _drawGridFooter(page, Pemeriksa,Pemeriksaan,Spesimen);
   //Add invoice footer
   // _drawFooter(page, pageSize,Pemeriksa);
   //Save and dispose the document.
@@ -167,6 +176,7 @@ PdfLayoutResult _drawHeader(
     String TanggalLahir,
     String NoLab,
     String Pemeriksa,
+    String Dokter,
     String TanggalPemeriksaan
     ) {
   
@@ -220,7 +230,7 @@ PdfLayoutResult _drawHeader(
   String Text1 =
       ': $TempatLahir,'+DateBuilder(TanggalLahir)+'/ '+CalculateAge(TanggalLahir)+' \n'+
           ': '+NoLab+'\n'+
-          ': '+Pemeriksa+'\n'+
+          ': '+Dokter+'\n'+
           ': '+DateBuilder(DateTime.now().toString())+'\n';
   PdfTextElement(text: Text1, font: contentFont).draw(
       page: page,
@@ -435,7 +445,7 @@ void _drawGridHematologi(PdfPage page,String Hemogoblin,String Hematokrit,String
       format: PdfStringFormat(
           alignment: PdfTextAlignment.left,
           lineAlignment: PdfVerticalAlignment.middle));
-  page.graphics.drawString(Trombosit,
+  page.graphics.drawString(LED,
       PdfStandardFont(PdfFontFamily.helvetica, 10),
       bounds: Rect.fromLTWH(pageSize.width*(4/6),MainSize+155, pageSize.width/6, 60),
       brush: PdfBrushes.black,
@@ -452,8 +462,36 @@ void _drawGridHematologi(PdfPage page,String Hemogoblin,String Hematokrit,String
   //-------------------------------------------------------
   //HEMATOLGI
 }
-void _drawGridFooter(PdfPage page,String Pemeriksa){
+void _drawGridFooter(PdfPage page,String Pemeriksa,String Pemeriksaan,Spesimen){
   final Size pageSize = page.getClientSize();
+  page.graphics.drawString("Waktu Pemeriksaan",
+      PdfStandardFont(PdfFontFamily.helvetica, 6),
+      bounds: Rect.fromLTWH(page.size.width*(0/6),pageSize.height - 55, page.size.width*(2/6), 60),
+      brush: PdfBrushes.black,
+      format: PdfStringFormat(
+          alignment: PdfTextAlignment.left,
+          lineAlignment: PdfVerticalAlignment.middle));
+  page.graphics.drawString(": "+Pemeriksaan,
+      PdfStandardFont(PdfFontFamily.helvetica, 6),
+      bounds: Rect.fromLTWH(page.size.width*(3/12),pageSize.height - 55, page.size.width*(2/6), 60),
+      brush: PdfBrushes.black,
+      format: PdfStringFormat(
+          alignment: PdfTextAlignment.left,
+          lineAlignment: PdfVerticalAlignment.middle));
+  page.graphics.drawString("Hasil Spesimen",
+      PdfStandardFont(PdfFontFamily.helvetica, 6),
+      bounds: Rect.fromLTWH(page.size.width*(0/6),pageSize.height - 50, page.size.width*(2/6), 60),
+      brush: PdfBrushes.black,
+      format: PdfStringFormat(
+          alignment: PdfTextAlignment.left,
+          lineAlignment: PdfVerticalAlignment.middle));
+  page.graphics.drawString(": "+Spesimen,
+      PdfStandardFont(PdfFontFamily.helvetica, 6),
+      bounds: Rect.fromLTWH(page.size.width*(3/12),pageSize.height - 50, page.size.width*(2/6), 60),
+      brush: PdfBrushes.black,
+      format: PdfStringFormat(
+          alignment: PdfTextAlignment.left,
+          lineAlignment: PdfVerticalAlignment.middle));
   page.graphics.drawString("Pemeriksa",
       PdfStandardFont(PdfFontFamily.helvetica, 12),
       bounds: Rect.fromLTWH(page.size.width*(3/6),pageSize.height - 95, page.size.width*(3/6), 60),
@@ -462,7 +500,7 @@ void _drawGridFooter(PdfPage page,String Pemeriksa){
           alignment: PdfTextAlignment.center,
           lineAlignment: PdfVerticalAlignment.middle));
   page.graphics.drawString("($Pemeriksa)",
-      PdfStandardFont(PdfFontFamily.helvetica, 12),
+      PdfStandardFont(PdfFontFamily.helvetica,12),
       bounds: Rect.fromLTWH(page.size.width*(3/6),pageSize.height -35, page.size.width*(3/6), 60),
       brush: PdfBrushes.black,
       format: PdfStringFormat(

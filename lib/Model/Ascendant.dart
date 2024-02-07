@@ -1,3 +1,4 @@
+import 'dart:html' as html;
 import 'dart:io';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/cupertino.dart';
@@ -7,12 +8,45 @@ import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:dio/dio.dart';
 import '../Dashboard.dart';
 import 'dart:typed_data';
 import 'package:flutter/services.dart' show rootBundle;
 
 
+
+Future<void> downloadExcel() async {
+  String excelUrl =  getServerName()+LaporanExcel();
+  try {
+    Dio dio = Dio();
+    Response response = await dio.get(
+      excelUrl,
+      options: Options(
+        responseType: ResponseType.bytes,
+      ),
+    );
+
+    html.Blob excelBlob = html.Blob([Uint8List.fromList(response.data)]);
+
+    final url = html.Url.createObjectUrlFromBlob(excelBlob);
+    final anchor = html.AnchorElement(href: url)
+      ..target = 'webbrowser'
+      ..download = 'laporan.xlsx'
+      ..click();
+
+    html.Url.revokeObjectUrl(url);
+  } catch (e) {
+    print('Error downloading Excel file: $e');
+  }
+}
+String CheckerZero(int Number){
+  String Checker="0";
+  if(Number<10){
+    return "0"+Number.toString();
+  }else{
+    return Number.toString();
+  }
+}
 Future<Uint8List> readImageData(String name) async {
   final data = await rootBundle.load('assets/img/$name');
   return data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
