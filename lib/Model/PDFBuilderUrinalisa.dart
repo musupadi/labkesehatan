@@ -267,6 +267,7 @@ void _drawGridUrinalisa(
     ){
   final Size pageSize = page.getClientSize();
   //-------------------------------------------------------
+  ListData.clear();
   if(!Warna.isEmpty || Warna !=""){
     ListData.add(ModelTwo(nama: "Warna", data: Warna));
   }

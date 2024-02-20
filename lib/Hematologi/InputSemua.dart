@@ -34,7 +34,7 @@ const List<String> Tahun = <String>[
 const List<String> Kelamin = <String>['L', 'P'];
 const List<String> PosNeg = <String>['-','Negatif', 'Positif'];
 const List<String> Warna = <String>['Kuning Jernih','Kuning Agak Keruh','Kuning Keruh','Kuning Pekat','Kuning Kecokelatan'];
-const List<String> PositiveNegative = <String>['-(Negatif)','+(Positif 1)','++(Positif 2)','+++(Positif 3)','++++(Positif 4)'];
+const List<String> PositiveNegative = <String>['Normal','+(Positif 1)','++(Positif 2)','+++(Positif 3)','++++(Positif 4)'];
 
 
 
@@ -129,7 +129,7 @@ class _InputSemuaState extends State<InputSemua> {
   TextEditingController cGULADARAHSEWAKTU = new TextEditingController();
 
   //Controller Urinalisa
-  // TextEditingController cWarna = new TextEditingController();
+  TextEditingController cWarna = new TextEditingController();
   TextEditingController cBeratJenis = new TextEditingController();
   TextEditingController cPH = new TextEditingController();
   // TextEditingController cLekositUrinalisa = new TextEditingController();
@@ -229,7 +229,7 @@ class _InputSemuaState extends State<InputSemua> {
         cGULADARAHSEWAKTU.text,
         //Kimia Darah
         //Urinalisa
-        dropdownValueWarna,
+        cWarna.text,
         cBeratJenis.text,
         cPH.text,
         cLekosit.text,
@@ -319,7 +319,7 @@ class _InputSemuaState extends State<InputSemua> {
     final url = Uri.parse(getServerName()+SaveUrinalisa());
     final request = http.MultipartRequest('POST', url);
     request.fields['id_pasien'] = cIdPasien.text;
-    request.fields['warna'] = dropdownValueWarna;
+    request.fields['warna'] = cWarna.text;
     request.fields['beratjenis'] =cBeratJenis.text;
     request.fields['ph'] =cPH.text;
     request.fields['lekosit'] = dropdownValueLekosit;
@@ -1640,37 +1640,17 @@ class _InputSemuaState extends State<InputSemua> {
                         ),
                       ),
                       //Warna
-                      Padding(
-                        padding: EdgeInsets.only(top: 0),
-                        child: Text("Warna"),
-                      ),
                       Container(
                           margin: EdgeInsets.only(top: 10,bottom: 10),
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 0.4),
-                              borderRadius: BorderRadius.circular(5)
-                          ),
-                          child: Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: DropdownButton<String>(
-                                value: dropdownValueWarna,
-                                elevation: 16,
-                                isExpanded: true,
-                                hint: Text("Warna"),
-                                icon: Icon(Icons.arrow_drop_down),
-                                onChanged: (String? value) {
-                                  // This is called when the user selects an item.
-                                  setState(() {
-                                    dropdownValueWarna= value!;
-                                  });
-                                },
-                                items: Warna.map<DropdownMenuItem<String>>((String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Text(value),
-                                  );
-                                }).toList(),
-                              )
+                          child: TextField(
+                            controller: cWarna,
+                            decoration: InputDecoration(
+                              hintText: 'Warna',
+                              labelText: 'Warna',
+                              border: OutlineInputBorder(),
+                            ),
+                            keyboardType: TextInputType.text,
+                            textInputAction: TextInputAction.done,
                           )
                       ),
                       //Berat Jenis

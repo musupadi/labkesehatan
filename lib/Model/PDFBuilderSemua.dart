@@ -182,11 +182,11 @@ PdfLayoutResult _drawHeader(
   
   final PdfFont contentFont = PdfStandardFont(PdfFontFamily.helvetica, 9);
   page.graphics.drawRectangle(
-      bounds: Rect.fromLTWH(0, MainSize+90, pageSize.width, 20),
+      bounds: Rect.fromLTWH(0, MainSize+100, pageSize.width, 20),
       brush: PdfSolidBrush(PdfColor(5, 165, 5)));
   page.graphics.drawString("Hematologi",
       PdfStandardFont(PdfFontFamily.helvetica, 12),
-      bounds: Rect.fromLTWH(0,MainSize+90, pageSize.width, 20),
+      bounds: Rect.fromLTWH(0,MainSize+100, pageSize.width, 20),
       brush: PdfBrushes.black,
       format: PdfStringFormat(
           alignment: PdfTextAlignment.center,
@@ -209,7 +209,7 @@ PdfLayoutResult _drawHeader(
       page: page,
       bounds: Rect.fromLTWH(
           60,
-          MainSize+40,
+          MainSize+50,
           pageSize.width*(1/4),
           pageSize.height - 120)
   );
@@ -223,7 +223,7 @@ PdfLayoutResult _drawHeader(
       page: page,
       bounds: Rect.fromLTWH(
           290,
-          MainSize+40,
+          MainSize+50,
           pageSize.width*(2/4),
           pageSize.height - 120)
   );
@@ -236,7 +236,7 @@ PdfLayoutResult _drawHeader(
       page: page,
       bounds: Rect.fromLTWH(
           370,
-          MainSize+40,
+          MainSize+50,
           pageSize.width*(3/4),
           pageSize.height - 120)
   );
@@ -245,7 +245,7 @@ PdfLayoutResult _drawHeader(
       page: page,
       bounds: Rect.fromLTWH(
           0,
-          MainSize+40,
+          MainSize+50,
           pageSize.width - (contentSize.width + 30),
           pageSize.height - 120)
   )!;

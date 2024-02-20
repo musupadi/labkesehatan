@@ -113,7 +113,7 @@ class _InputHematologiState extends State<InputHematologi> {
     final response = await request.send();
     final respStr = await response.stream.bytesToString();
     if (response.statusCode == 200) {
-      print("Zyarga Debugger "+respStr.toString());
+      print("Zyarga Debugger "+cHemogoblin.text);
       generatePDFHematologi(
         //Data Pribadi
         cNama.text,

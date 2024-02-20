@@ -247,9 +247,10 @@ void _drawGridHematologi(PdfPage page,String Hemogoblin,String Hematokrit,String
   final Size pageSize = page.getClientSize();
   //-------------------------------------------------------
   //HEMATOLGI
-
+  print("Zyarga Debugger ada ? : "+Hemogoblin);
+  ListData.clear();
   if(!Hemogoblin.isEmpty || Hemogoblin !=""){
-    ListData.add( ModelHematologi(nama: "Hemogoblin", data: Hemogoblin, rujukan:  "P : 14 - 18 gr/dl"
+    ListData.add(ModelHematologi(nama: "Hemogoblin", data: Hemogoblin, rujukan:  "P : 14 - 18 gr/dl"
         "\nW : 12 - 14 gr/dl"));
   }
   if(!Lekosit.isEmpty || Lekosit !=""){

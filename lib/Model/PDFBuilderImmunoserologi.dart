@@ -261,7 +261,7 @@ void _drawGridImmunoserologi(PdfPage page,String hbsag,String hiv,String vdrl){
   final Size pageSize = page.getClientSize();
   //-------------------------------------------------------
   //HEMATOLGI
-
+  ListData.clear();
   if(!hbsag.isEmpty || hbsag !=""){
     ListData.add(ModelTwo(nama: "HBsAg", data: hbsag));
   }
