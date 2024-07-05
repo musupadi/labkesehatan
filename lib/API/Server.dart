@@ -1,6 +1,6 @@
 String getServerName(){
-  return 'https://apilabkes.siegemilsystem.com/';
-  // return 'http://localhost/apilabkes.siegemilsystem.com/';
+  return 'https://api.labkes.net/';
+  // return 'http://10.0.15.12/apilabkes.siegemilsystem.com/';
 }
 String Login(){
   return 'labkes/login';
